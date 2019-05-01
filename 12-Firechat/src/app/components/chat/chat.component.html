@@ -2,20 +2,33 @@
 <hr>
 
 <div class="app-mensajes" id="app-mensajes">
+<!-- 
+Esta logica,como siempre sorprendiendome jajajaj
+Pregunta por el uid de usuario, si el uid es igual al 
+autenticado, pues muestra los mensajes a un lado(derechi),
+y si no pues al otro lado
 
-  <div class="text-right">
-    <span class="badge badge-primary">Alex</span>
+La otra es que con es span cambia los colores con la misma logica -->
+
+
+  <div *ngFor="let chat of chatservice.chats"
+    [ngClass]="{ 'text-right': chatservice.datosuserio.uid == chat.uid}" >
+    <span class="badge"
+    [ngClass]="{ 'badge-primary': chatservice.datosuserio.uid == chat.uid,
+                 'badge-info': chatservice.datosuserio.uid != chat.uid}">
+                {{chat.nombre}}
+    </span>
     <p>
-      Mensaje de char
+      {{chat.mensaje}}
     </p>
   </div>
 
-  <div class="text-left">
+  <!-- <div class="text-left">
     <span class="badge badge-success">Alex</span>
     <p>
       Mensaje de chat
     </p>
-  </div>
+  </div> -->
 
 </div>
 <br>
