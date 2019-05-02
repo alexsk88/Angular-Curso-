@@ -1,0 +1,18 @@
+<div class="container rounded pt-5">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">
+            <i class="fas fa-search"></i>
+          </span>
+        </div>
+        <input type="text" 
+              #txtbuscar
+              (keyup.enter)="busquedaapp(txtbuscar.value)" 
+              class="form-control" 
+              placeholder="Buscar Pelicula" 
+              aria-label="Buscar Pelicula" 
+              aria-describedby="basic-addon1">
+      </div>
+
+      <app-galerias *ngIf="mostrarsearch" [movies]="busqueda"></app-galerias>
+</div>
