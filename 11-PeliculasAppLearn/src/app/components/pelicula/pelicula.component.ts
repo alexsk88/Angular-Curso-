@@ -13,6 +13,7 @@ export class PeliculaComponent implements OnInit
 {
 
   data: any = {}
+  loading= false;
   
   constructor(private peliservice: ThemoviedbService,
               private activatedRoute: ActivatedRoute,
@@ -21,8 +22,11 @@ export class PeliculaComponent implements OnInit
     activatedRoute.params.subscribe((id: any)=>{
  
       peliservice.infopeli(id['id']).subscribe(datamovie =>{
+       
         console.log(datamovie);
+
         this.data = datamovie;
+        this.loading = true;
       });
     })
 

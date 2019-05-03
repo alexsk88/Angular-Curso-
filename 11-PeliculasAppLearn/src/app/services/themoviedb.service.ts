@@ -43,6 +43,11 @@ export class ThemoviedbService {
     `&language=es`+
     `&certification=APTA`;
 
+    // ESO DE .RESULT es porque filtre la info, segun la api de ellos
+    // Los result son son resultados de las peliculas,
+    // porque sin eso me vota un objeto mas detallado de la informacion 
+    // como paginas, tipo de data etc, y solo necesito la info 
+    // o el array de la pelicula
     return this.http.get(url)
                .pipe(map((moviesninos: any) => moviesninos.results));
   }
@@ -69,7 +74,7 @@ export class ThemoviedbService {
     `&page=1`+
     `&include_adult=false`;
 
-    console.log(palabra);
+    console.log('palabra desde service',palabra);
 
     return this.http.get(url)
                .pipe(map((busqueda: any) => busqueda.results));

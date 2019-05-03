@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router: Router)
+  {
+    
+  }
 
   ngOnInit() {
+  }
+
+  buscarmovie(termino: string)
+  {
+    console.log('desde navbar' , termino);
+
+    // Aqui simplemente accedmos a buscar con un parametro
+    // que sera leido con un params, y con el contructor de buscar
+    // ejecuta la busqueda ?? Interesante como siempre
+    this.router.navigate(['buscar', termino]);
   }
 
 }

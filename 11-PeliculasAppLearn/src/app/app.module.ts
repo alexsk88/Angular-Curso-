@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+// Para utulizar ng model falta esto siempre
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -29,7 +31,8 @@ import { ProductorPipe } from './pipes/productor.pipe';
   imports: [
     BrowserModule,
     HttpClientModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

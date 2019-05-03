@@ -31,10 +31,12 @@
 
     </ul>
 
-    <form class="form-inline my-2 my-lg-0" novalidate="novalidate">
+    <form class="form-inline my-2 my-lg-0" onsubmit="return false" novalidate="novalidate">
 
       <input class="form-control mr-sm-2" 
-             type="search"
+             type="text"
+             (keyup.enter)="buscarmovie(termino.value)"
+             #termino
              placeholder="Buscar"
              aria-label="Search"/>
 

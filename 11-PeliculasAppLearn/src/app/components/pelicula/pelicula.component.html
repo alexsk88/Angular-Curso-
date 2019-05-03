@@ -11,10 +11,25 @@
         </div>
 
     </div>
+<!-- 
+    Este loading lo coloque yo, esto del ng template
+    lo aprendi hace arto en otro curso de angular -->
+    <ng-template #cargando>
+        <div class="mx-auto" style="width: 200px;">
+            <div class="spinner-border text-dark text-center" 
+                 role="status"
+                 style="width: 50px; height: 50px">
+                <span class="sr-only">...</span>
+            </div>
+            <h1>Cargando..</h1>
+        </div>
+    </ng-template>
+    
 
-    <div class="container mt-5">
+    <div class="container mt-5" *ngIf="loading; else cargando">
       <div class="row">
         <div class="col-md-4">
+          <!-- Ese pipe de la imagen es creacion mia -->
             <img [src]="data | peliculaImagen: false: 780" 
                  [alt]="data.original_title"
                  class="img-fluid"/>
