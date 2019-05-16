@@ -24,7 +24,7 @@ import { AgmCoreModule } from '@agm/core';
     // Este es el modulo del Mapa de Google
     // Esta libreria de mapas es propia de Angular
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBMU0uLU7-HoRERFegmnwW4tB4k3y7m1Fo'
+      apiKey: ''
     })
   ],
   providers: [],

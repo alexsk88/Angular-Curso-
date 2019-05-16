@@ -4,14 +4,7 @@
 
 export const environment = {
   production: false,
-  firebase : {
-    apiKey: 'AIzaSyAJficyxMLaSgU_EQVrj_tEZfjJ2eIAWUA',
-    authDomain: 'ejemploapi-d98c5.firebaseapp.com',
-    databaseURL: 'https://ejemploapi-d98c5.firebaseio.com',
-    projectId: 'ejemploapi-d98c5',
-    storageBucket: 'ejemploapi-d98c5.appspot.com',
-    messagingSenderId: '871493364063'
-  }
+//AIKEY
 };
 
 /*

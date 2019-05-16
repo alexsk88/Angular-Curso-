@@ -24,7 +24,7 @@ export class SptifyService {
     // YA LO APRENDEER......
 
     const headers = new HttpHeaders({
-      'Authorization' : 'Bearer BQD7ZC8Qj9cU8AHp0jxHxREySSAMs7AMT0jkCI1Ga_clEXij9-7gSQunI1xFQAZjQyuBLCR8BLTfEi-ukfU' 
+      'Authorization' : 'Bearer code here' 
     })
     const url = `https://api.spotify.com/v1/${ query }`;
 
