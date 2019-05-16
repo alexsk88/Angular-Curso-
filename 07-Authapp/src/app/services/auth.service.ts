@@ -16,7 +16,7 @@ export class AuthService {
   public userProfile: any;
 
   auth0 = new auth0.WebAuth({
-    clientID: 'xFLjeTyf6akbdpqFK7j8cNtPazTcn4Ay',
+    clientID: 'keyhere',
     domain: 'novaservice.auth0.com',
     responseType: 'token id_token',
 
