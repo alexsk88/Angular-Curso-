@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class ThemoviedbService {
 
-  private apikey = 'd45abdd2695eb2f5c82092890ee7a3dd';
+  private apikey = '';
   private urlMoviedb = 'https://api.themoviedb.org/3';
 
   constructor(private http: HttpClient) {}
