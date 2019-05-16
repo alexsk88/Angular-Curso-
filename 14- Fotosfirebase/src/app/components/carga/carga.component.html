@@ -17,7 +17,11 @@
   <div class="col-md-8">
     <h4>Cargar Archivos</h4>
 
-    <button (click)="cargarimages()" type="button" class="btn btn-outline-success btn-block">Cargar</button>
+    <!-- Ese disbled de aui abajo es para evitar subir algo que no existe -->
+    <button (click)="cargarimages()"
+            [ngClass]="{'prohibidocursr': archivos.length === 0}"
+            [disabled]="archivos.length === 0"
+            type="button" class="btn btn-outline-success btn-block">Cargar</button>
     <button (click)="limpiarArchivos()" type="button" class="btn btn-outline-danger btn-block">Limpiar</button>
 
     <table class="table">
@@ -39,7 +43,8 @@
           <td>
             <div class="progress">
               <div class="progress-bar" role="progressbar"
-              [ngStyle]="{'width': item.progreso + '%'}"></div>
+              [ngStyle]="{'width': item.progreso + '%'}">{{item.progreso | number:'1.0-0'}} %</div>
+              <!-- Lo redondea sin decimales este pipe de angular -->
             </div>
           </td>
         </tr>

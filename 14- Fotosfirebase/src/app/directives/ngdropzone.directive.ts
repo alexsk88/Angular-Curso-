@@ -67,10 +67,14 @@ export class NgdropzoneDirective
   {
     console.log('Estos son los archivos', archivosLista);
 
+    // Object.getOwnPropertyNames obtiene los elemtos clave valor de objeto o array
       for ( const propiedad in Object.getOwnPropertyNames( archivosLista ) ) {
 
+        // Aqui pasa los archivos de de objeto y los add a un arreglo
+        // fin de la historia , for in clave valor
         const archivoTemporal = archivosLista[propiedad];
 
+        // valida que el archivo se pueda subir
         if ( this._archivoValido( archivoTemporal ) ) {
 
           const nuevoArchivo = new FileItem( archivoTemporal );

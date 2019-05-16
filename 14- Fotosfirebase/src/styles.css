@@ -23,3 +23,9 @@
 .text-green {
 	color: green
 }
+
+.prohibidocursr
+{
+  cursor: no-drop;
+  background: yellow;
+}

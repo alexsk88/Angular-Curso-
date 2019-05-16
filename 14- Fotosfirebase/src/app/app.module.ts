@@ -24,7 +24,8 @@ import { NgdropzoneDirective } from './directives/ngdropzone.directive';
     APP_ROUTING,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
